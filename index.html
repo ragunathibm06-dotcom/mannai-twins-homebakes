@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mannai Twins | Premium Healthy Homebakes</title>
+    <title>Manni Twins | Healthy Home Bakes – Manachanallur</title>
 
     <link rel="icon" type="image/png" href="assets/logo.png">
     <link rel="apple-touch-icon" href="assets/logo.png">
@@ -46,8 +46,7 @@
 
         header {
             position: fixed;
-            top: 0;
-            width: 100%;
+            top: 0; width: 100%;
             background: rgba(253, 251, 247, 0.95);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
@@ -63,8 +62,7 @@
         .logo { display: flex; align-items: center; text-decoration: none; z-index: 1001; }
 
         .brand-logo {
-            max-height: 80px;
-            width: auto;
+            max-height: 80px; width: auto;
             transition: var(--transition);
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
         }
@@ -97,27 +95,21 @@
         .header-actions { display: flex; align-items: center; gap: 1.5rem; z-index: 1001; }
 
         .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.8rem;
-            color: var(--primary-dark);
+            display: none; cursor: pointer;
+            font-size: 1.8rem; color: var(--primary-dark);
             transition: var(--transition);
         }
         .menu-toggle:hover { color: var(--accent-purple); }
 
         .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
+            display: inline-flex; align-items: center; gap: 0.8rem;
             padding: 1rem 2.5rem;
             background: var(--primary-dark);
             color: var(--surface-white);
             text-decoration: none;
             border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
+            font-size: 0.9rem; font-weight: 500;
+            letter-spacing: 1px; text-transform: uppercase;
             transition: var(--transition);
             border: 1px solid var(--primary-dark);
         }
@@ -132,95 +124,124 @@
         .btn-outline { background: transparent; color: var(--primary-dark); border: 1px solid var(--primary-dark); }
         .btn-outline:hover { background: var(--primary-dark); color: var(--surface-white); }
 
-        /* Hero uses CSS background with multiple fallback sources */
+        /* Hero */
         .hero {
-            height: 100vh;
-            min-height: 600px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 0 5%;
+            height: 100vh; min-height: 600px;
+            display: flex; align-items: center; justify-content: center;
+            text-align: center; padding: 0 5%;
             position: relative;
             background: #2a1f1a;
         }
 
         .hero-bg {
-            position: absolute;
-            inset: 0;
-            background-image: url('https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
-            background-size: cover;
-            background-position: center;
+            position: absolute; inset: 0;
+            background-size: cover; background-position: center;
             opacity: 0.55;
         }
 
-        .hero-content { position: relative; z-index: 1; max-width: 800px; }
+        .hero-content { position: relative; z-index: 1; max-width: 860px; }
 
         .hero h1 {
             color: var(--surface-white);
-            font-size: clamp(3rem, 6vw, 5.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
+            font-size: clamp(2.8rem, 5.5vw, 5rem);
+            line-height: 1.1; margin-bottom: 1.5rem;
             text-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
         .hero p {
             color: rgba(255,255,255,0.9);
-            font-size: clamp(1rem, 1.5vw, 1.2rem);
-            margin-bottom: 2.5rem;
-            font-weight: 300;
-            letter-spacing: 0.5px;
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
+            margin-bottom: 0.8rem;
+            font-weight: 300; letter-spacing: 0.5px;
+        }
+
+        .hero-tagline {
+            color: var(--accent-gold) !important;
+            font-weight: 500 !important;
+            font-size: 1.05rem !important;
+            letter-spacing: 1px !important;
+            margin-bottom: 2.5rem !important;
         }
 
         section { padding: 8rem 5%; }
         .section-header { text-align: center; margin-bottom: 4rem; }
 
         .section-subtitle {
-            display: block;
-            color: var(--accent-purple);
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 1rem;
-            font-weight: 600;
+            display: block; color: var(--accent-purple);
+            font-size: 0.85rem; text-transform: uppercase;
+            letter-spacing: 3px; margin-bottom: 1rem; font-weight: 600;
         }
 
         .section-title { font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.2; }
 
+        /* About */
         .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 5rem; align-items: center;
+            max-width: 1200px; margin: 0 auto;
         }
 
         .about-image {
-            border-radius: var(--radius-lg);
-            overflow: hidden;
+            border-radius: var(--radius-lg); overflow: hidden;
             box-shadow: 0 20px 40px rgba(58, 46, 77, 0.1);
             background: #f0ebe4;
         }
 
         .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            aspect-ratio: 4/5;
-            display: block;
+            width: 100%; height: 100%;
+            object-fit: cover; aspect-ratio: 4/5; display: block;
         }
 
         .about-content p { font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-body); }
 
+        .about-tagline {
+            display: inline-block;
+            margin-top: 0.5rem;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            font-style: italic;
+            color: var(--accent-purple);
+        }
+
+        /* Baker quote card */
+        .baker-card {
+            background: var(--surface-white);
+            border-left: 4px solid var(--accent-gold);
+            border-radius: var(--radius-md);
+            padding: 2rem 2rem 2rem 2.5rem;
+            margin-top: 2.5rem;
+            box-shadow: 0 8px 24px rgba(58,46,77,0.06);
+        }
+
+        .baker-card h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.3rem;
+            color: var(--primary-dark);
+            margin-bottom: 0.3rem;
+        }
+
+        .baker-card .baker-title {
+            font-size: 0.8rem;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .baker-card p {
+            font-size: 0.98rem !important;
+            color: var(--text-body);
+            margin-bottom: 0.8rem !important;
+        }
+
+        /* Menu */
         .menu-bg { background-color: var(--surface-white); }
 
         .menu-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2.5rem;
-            max-width: 1400px;
-            margin: 0 auto;
+            gap: 2.5rem; max-width: 1400px; margin: 0 auto;
         }
 
         .menu-card {
@@ -237,17 +258,14 @@
         }
 
         .menu-img-wrapper {
-            overflow: hidden;
-            aspect-ratio: 4/3;
+            overflow: hidden; aspect-ratio: 4/3;
             background: #f0ebe4;
         }
 
         .menu-card img {
-            width: 100%;
-            height: 100%;
+            width: 100%; height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease;
-            display: block;
+            transition: transform 0.8s ease; display: block;
         }
 
         .menu-card:hover img { transform: scale(1.08); }
@@ -256,6 +274,7 @@
         .menu-info h3 { font-size: 1.4rem; margin-bottom: 0.8rem; }
         .menu-info p { font-size: 0.95rem; color: var(--text-light); }
 
+        /* Footer */
         footer {
             background: var(--primary-dark);
             color: var(--surface-white);
@@ -265,9 +284,7 @@
         .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 4rem;
-            max-width: 1200px;
-            margin: 0 auto 4rem;
+            gap: 4rem; max-width: 1200px; margin: 0 auto 4rem;
         }
 
         .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 1.5rem; max-width: 350px; }
@@ -277,19 +294,13 @@
 
         .contact-text h4 {
             font-family: 'Montserrat', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--accent-purple);
-            margin-bottom: 0.5rem;
+            font-size: 0.75rem; text-transform: uppercase;
+            letter-spacing: 2px; color: var(--accent-purple); margin-bottom: 0.5rem;
         }
 
         .contact-text p, .contact-text a {
-            color: var(--surface-white);
-            text-decoration: none;
-            font-size: 1.1rem;
-            line-height: 1.5;
-            transition: var(--transition);
+            color: var(--surface-white); text-decoration: none;
+            font-size: 1.1rem; line-height: 1.5; transition: var(--transition);
         }
 
         .contact-text a:hover { color: var(--accent-gold); }
@@ -297,13 +308,10 @@
 
         .social-icon {
             display: flex; align-items: center; justify-content: center;
-            width: 45px; height: 45px;
-            border-radius: 50%;
+            width: 45px; height: 45px; border-radius: 50%;
             border: 1px solid rgba(255,255,255,0.2);
-            color: var(--surface-white);
-            font-size: 1.2rem;
-            transition: var(--transition);
-            text-decoration: none;
+            color: var(--surface-white); font-size: 1.2rem;
+            transition: var(--transition); text-decoration: none;
         }
 
         .social-icon:hover {
@@ -313,11 +321,9 @@
         }
 
         .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
+            text-align: center; padding-top: 2rem;
             border-top: 1px solid rgba(255,255,255,0.1);
-            font-size: 0.85rem;
-            color: rgba(255,255,255,0.5);
+            font-size: 0.85rem; color: rgba(255,255,255,0.5);
             display: flex; flex-direction: column; gap: 0.5rem;
         }
 
@@ -335,8 +341,7 @@
                 position: absolute; top: 100%; left: 0; width: 100%;
                 background: rgba(253, 251, 247, 0.98);
                 backdrop-filter: blur(15px);
-                flex-direction: column;
-                padding: 2rem 5%; gap: 2rem;
+                flex-direction: column; padding: 2rem 5%; gap: 2rem;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
                 transform: translateY(-150%); opacity: 0; pointer-events: none;
                 transition: var(--transition);
@@ -355,7 +360,7 @@
 
     <header>
         <a href="#" class="logo">
-            <img src="assets/logo.png" alt="Mannai Twins Logo" class="brand-logo">
+            <img src="assets/logo.png" alt="Manni Twins Logo" class="brand-logo">
         </a>
         <nav id="nav-menu">
             <a href="#about" class="nav-link">Our Story</a>
@@ -373,35 +378,47 @@
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-        <!-- Pexels - always loads, no referral block -->
         <div class="hero-bg" id="hero-bg"></div>
         <div class="hero-content">
-            <span style="display:block; color:var(--accent-gold); font-family:'Montserrat',sans-serif; letter-spacing:4px; text-transform:uppercase; font-size:0.9rem; margin-bottom:1.5rem;">Baked with love at home</span>
-            <h1>The Purest Ingredients.<br>The Finest Taste.</h1>
-            <p>Experience the luxury of premium homemade treats, crafted from traditional millets and natural flavours. No compromises, just pure goodness.</p>
+            <span style="display:block; color:var(--accent-gold); font-family:'Montserrat',sans-serif; letter-spacing:4px; text-transform:uppercase; font-size:0.85rem; margin-bottom:1.2rem;">Manni Twins Healthy Home Bakes – Manachanallur</span>
+            <h1>Baked with Love,<br>Care & Health in Mind.</h1>
+            <p style="margin-bottom:0.6rem;">Welcome to Manni Twins Healthy Home Bakes, where every bake is made with love, care, and health in mind.</p>
+            <p style="margin-bottom:0.6rem;">We focus on wholesome ingredients like millets, cold-pressed oils, khandsari sugar, and high-quality cocoa — avoiding unnecessary additives. Every product is baked fresh in small batches from our home kitchen in Manachanallur.</p>
+            <p class="hero-tagline">Healthy. Homemade. Honest.</p>
             <a href="https://wa.me/919677372159?text=Hi!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn">
                 <i class="fab fa-whatsapp"></i> Order on WhatsApp
             </a>
         </div>
     </section>
 
+    <!-- ABOUT -->
     <section id="about">
         <div class="about-grid">
             <div class="about-image">
-                <img id="about-img" alt="Home kitchen baking">
+                <img id="about-img" alt="Kaveya Karthik – Baker & Founder">
             </div>
             <div class="about-content">
                 <span class="section-subtitle">Our Heritage</span>
-                <h2 class="section-title">The Art of<br>Healthy Baking</h2>
+                <h2 class="section-title">The Heart of<br>Healthy Baking</h2>
                 <br>
-                <p>Founded by <strong>Mrs. Kaviya</strong>, welcome to our home kitchen, where absolute passion meets uncompromising nutrition. For over a year, we have dedicated ourselves to mastering the delicate balance between irresistible flavours and holistic health.</p>
-                <p>We believe true luxury lies in pure, authentic ingredients. That is why our creations highlight nutrient-dense traditional grains like Ragi (Finger Millet) and Kambu (Pearl Millet), completely free from artificial additives. Every cake, biscuit, and savoury bite is meticulously crafted from scratch in our hygienic home space.</p>
-                <p>We don't just bake food; we craft experiences of genuine, wholesome goodness. Taste the authenticity and let us make your next celebration unforgettable.</p>
+                <p>Founded by <strong>Kaveya Karthik</strong> (BE Electronics & Communication Engineering, ME Applied Electronics), this home bakery started with a mother's mission — to give her twin daughters healthy and safe homemade treats.</p>
+                <p>What began as baking for family soon grew into a passion to serve the community with nutritious, preservative-free baked goods made from millets, cold-pressed oils, khandsari sugar, and high-quality cocoa.</p>
+                <p>Every product is baked fresh in small batches from our home kitchen in Manachanallur, with no shortcuts and no compromises.</p>
+                <span class="about-tagline">Healthy. Homemade. Honest.</span>
+
+                <div class="baker-card">
+                    <h4>Kaveya Karthik</h4>
+                    <span class="baker-title">Founder & Baker · Assistant Professor, Engineering College</span>
+                    <p>I am a mother of twin girls. My baking journey began when I wanted to prepare healthy snacks for my children — without preservatives, artificial ingredients, or refined products.</p>
+                    <p>Experimenting with millets, natural sweeteners, and simple ingredients, I slowly created recipes that are both tasty and nutritious. Today, through Manni Twins Healthy Home Bakes, I share these homemade treats with families who want better, healthier baked options for their children and loved ones.</p>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- MENU -->
     <section id="menu" class="menu-bg">
         <div class="section-header">
             <span class="section-subtitle">Our Selection</span>
@@ -410,11 +427,12 @@
         <div class="menu-grid" id="menu-grid"></div>
     </section>
 
+    <!-- FOOTER / CONTACT -->
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-brand">
-                <h2 style="color:var(--surface-white); font-size:2rem;">Mannai Twins</h2>
-                <p>Redefining homemade treats through the perfect blend of traditional nutrition and modern luxury.</p>
+                <h2 style="color:var(--surface-white); font-size:2rem;">Manni Twins</h2>
+                <p>Healthy. Homemade. Honest. — Baked fresh in small batches by Kaveya Karthik from our home kitchen in Manachanallur.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/mannaitwins_homebakes" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                     <a href="https://youtube.com/shorts/oXJsgTzi4uo" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
@@ -433,26 +451,28 @@
                     <i class="fas fa-home contact-icon" style="font-size:1.2rem;"></i>
                     <div class="contact-text">
                         <h4>Our Home Kitchen</h4>
-                        <p>Bhuvaneshwari Nagar,<br>Mannachanallur,<br>Trichy.</p>
+                        <p>Bhuvaneshwari Nagar,<br>Manachanallur,<br>Trichy.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>&copy; 2026 Mannai Twins Healthy Homebakes. All rights reserved.</span>
-            <span style="font-style:italic; color:var(--accent-gold);">Crafted with care by Mrs. Kaviya in Trichy.</span>
+            <span>&copy; 2026 Manni Twins Healthy Home Bakes. All rights reserved.</span>
+            <span style="font-style:italic; color:var(--accent-gold);">Crafted with care by Kaveya Karthik in Manachanallur, Trichy.</span>
         </div>
     </footer>
 
     <script>
-        // ─── IMAGE CONFIG ───────────────────────────────────────────────
-        // Using Pexels direct photo URLs — reliable worldwide including India
+        // ── IMAGE SOURCES ────────────────────────────────────────────────
+        // All Pexels direct URLs — reliable in India
+
         const HERO_URLS = [
+            'https://images.pexels.com/photos/1775043/pexels-photo-1775043.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
             'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
-            'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
         ];
 
         const ABOUT_URLS = [
+            'https://images.pexels.com/photos/6605304/pexels-photo-6605304.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
             'https://images.pexels.com/photos/3407777/pexels-photo-3407777.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
             'https://images.pexels.com/photos/6605210/pexels-photo-6605210.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
         ];
@@ -478,8 +498,8 @@
                 title: 'Healthy Millet Cakes',
                 desc: 'Nutrient-rich Ragi and Kambu cakes offering a truly guilt-free indulgence.',
                 urls: [
-                    'https://images.pexels.com/photos/6605304/pexels-photo-6605304.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
-                    'https://images.pexels.com/photos/9465445/pexels-photo-9465445.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/1414234/pexels-photo-1414234.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/4110541/pexels-photo-4110541.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
                     'https://images.pexels.com/photos/1359330/pexels-photo-1359330.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
                 ]
             },
@@ -525,53 +545,44 @@
             },
         ];
 
-        // ─── SMART IMAGE LOADER ─────────────────────────────────────────
-        // Tries each URL in order, uses first one that loads
-        function loadImageWithFallback(imgEl, urls, index = 0) {
-            if (index >= urls.length) return; // all failed, leave as-is
-            const testImg = new Image();
-            testImg.onload = () => { imgEl.src = urls[index]; };
-            testImg.onerror = () => { loadImageWithFallback(imgEl, urls, index + 1); };
-            testImg.src = urls[index];
+        // ── SMART LOADER: tries each URL until one loads ─────────────────
+        function loadImg(imgEl, urls, i = 0) {
+            if (i >= urls.length) return;
+            const t = new Image();
+            t.onload = () => { imgEl.src = urls[i]; };
+            t.onerror = () => { loadImg(imgEl, urls, i + 1); };
+            t.src = urls[i];
         }
 
-        function loadBgWithFallback(el, urls, index = 0) {
-            if (index >= urls.length) return;
-            const testImg = new Image();
-            testImg.onload = () => { el.style.backgroundImage = `url('${urls[index]}')`; };
-            testImg.onerror = () => { loadBgWithFallback(el, urls, index + 1); };
-            testImg.src = urls[index];
+        function loadBg(el, urls, i = 0) {
+            if (i >= urls.length) return;
+            const t = new Image();
+            t.onload = () => { el.style.backgroundImage = `url('${urls[i]}')`; };
+            t.onerror = () => { loadBg(el, urls, i + 1); };
+            t.src = urls[i];
         }
 
-        // ─── LOAD HERO ──────────────────────────────────────────────────
-        loadBgWithFallback(document.getElementById('hero-bg'), HERO_URLS);
+        // Load hero, about, menu
+        loadBg(document.getElementById('hero-bg'), HERO_URLS);
+        loadImg(document.getElementById('about-img'), ABOUT_URLS);
 
-        // ─── LOAD ABOUT IMAGE ───────────────────────────────────────────
-        loadImageWithFallback(document.getElementById('about-img'), ABOUT_URLS);
-
-        // ─── BUILD & LOAD MENU CARDS ────────────────────────────────────
         const menuGrid = document.getElementById('menu-grid');
         MENU_ITEMS.forEach(item => {
             const card = document.createElement('div');
             card.className = 'menu-card';
             card.innerHTML = `
-                <div class="menu-img-wrapper">
-                    <img alt="${item.title}">
-                </div>
+                <div class="menu-img-wrapper"><img alt="${item.title}"></div>
                 <div class="menu-info">
                     <h3>${item.title}</h3>
                     <p>${item.desc}</p>
-                </div>
-            `;
+                </div>`;
             menuGrid.appendChild(card);
-            const img = card.querySelector('img');
-            loadImageWithFallback(img, item.urls);
+            loadImg(card.querySelector('img'), item.urls);
         });
 
-        // ─── MOBILE NAV ─────────────────────────────────────────────────
-        if (window.innerWidth <= 768) {
-            document.getElementById('mobile-btn').style.display = 'inline-flex';
-        }
+        // ── MOBILE NAV ───────────────────────────────────────────────────
+        if (window.innerWidth <= 768) document.getElementById('mobile-btn').style.display = 'inline-flex';
+
         window.addEventListener('resize', () => {
             if (window.innerWidth <= 768) {
                 document.getElementById('mobile-btn').style.display = 'inline-flex';
@@ -584,19 +595,17 @@
 
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
-        const navLinks = document.querySelectorAll('.nav-link');
         const mobileIcon = mobileMenu.querySelector('i');
 
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('nav-active');
-            if (navMenu.classList.contains('nav-active')) {
-                mobileIcon.classList.replace('fa-bars', 'fa-times');
-            } else {
-                mobileIcon.classList.replace('fa-times', 'fa-bars');
-            }
+            mobileIcon.classList.replace(
+                navMenu.classList.contains('nav-active') ? 'fa-bars' : 'fa-times',
+                navMenu.classList.contains('nav-active') ? 'fa-times' : 'fa-bars'
+            );
         });
 
-        navLinks.forEach(link => {
+        document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('nav-active');
                 mobileIcon.classList.replace('fa-times', 'fa-bars');
