@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mannai Twins | Premium Healthy Homebakes</title>
+
+    <!-- ✅ Favicon & Apple Touch Icon - assets/logo.png -->
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -11,11 +16,10 @@
     
     <style>
         :root {
-            /* Updated palette based on the Mannai Twins Logo */
-            --primary-dark: #3a2e4d; /* Deep Navy/Purple from the text */
-            --accent-purple: #8b79a3; /* Soft Lavender from the wreath */
-            --accent-gold: #c29d6d; /* Warm Wheat/Honey */
-            --bg-base: #FDFBF7; /* Warm Cream */
+            --primary-dark: #3a2e4d;
+            --accent-purple: #8b79a3;
+            --accent-gold: #c29d6d;
+            --bg-base: #FDFBF7;
             --surface-white: #FFFFFF;
             --text-body: #5C5652;
             --text-light: #9E9792;
@@ -24,15 +28,8 @@
             --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Montserrat', sans-serif;
@@ -42,14 +39,12 @@
             overflow-x: hidden;
         }
 
-        /* Premium Typography */
         h1, h2, h3, .serif {
             font-family: 'Cormorant Garamond', serif;
             color: var(--primary-dark);
             font-weight: 600;
         }
 
-        /* Glassmorphism Header */
         header {
             position: fixed;
             top: 0;
@@ -74,13 +69,12 @@
         }
 
         .brand-logo {
-            max-height: 80px; /* Perfect desktop size */
+            max-height: 80px;
             width: auto;
             transition: var(--transition);
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
         }
 
-        /* Navigation Links */
         nav {
             display: flex;
             align-items: center;
@@ -112,7 +106,6 @@
         nav a:hover { color: var(--accent-purple); }
         nav a:hover::after { width: 100%; }
 
-        /* Header Actions Container */
         .header-actions {
             display: flex;
             align-items: center;
@@ -120,7 +113,6 @@
             z-index: 1001;
         }
 
-        /* Hamburger Menu Button */
         .menu-toggle {
             display: none;
             cursor: pointer;
@@ -129,11 +121,8 @@
             transition: var(--transition);
         }
 
-        .menu-toggle:hover {
-            color: var(--accent-purple);
-        }
+        .menu-toggle:hover { color: var(--accent-purple); }
 
-        /* Elegant Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -169,7 +158,6 @@
             color: var(--surface-white);
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             min-height: 600px;
@@ -212,15 +200,9 @@
             letter-spacing: 0.5px;
         }
 
-        /* Uniform Section Styling */
-        section {
-            padding: 8rem 5%;
-        }
+        section { padding: 8rem 5%; }
 
-        .section-header {
-            text-align: center;
-            margin-bottom: 4rem;
-        }
+        .section-header { text-align: center; margin-bottom: 4rem; }
 
         .section-subtitle {
             display: block;
@@ -232,12 +214,8 @@
             font-weight: 600;
         }
 
-        .section-title {
-            font-size: clamp(2.5rem, 4vw, 3.5rem);
-            line-height: 1.2;
-        }
+        .section-title { font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1.2; }
 
-        /* About Section */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -262,16 +240,9 @@
             display: block;
         }
 
-        .about-content p {
-            font-size: 1.05rem;
-            margin-bottom: 1.5rem;
-            color: var(--text-body);
-        }
+        .about-content p { font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-body); }
 
-        /* Menu Section */
-        .menu-bg {
-            background-color: var(--surface-white);
-        }
+        .menu-bg { background-color: var(--surface-white); }
 
         .menu-grid {
             display: grid;
@@ -294,10 +265,7 @@
             box-shadow: 0 15px 35px rgba(58, 46, 77, 0.08);
         }
 
-        .menu-img-wrapper {
-            overflow: hidden;
-            aspect-ratio: 4/3;
-        }
+        .menu-img-wrapper { overflow: hidden; aspect-ratio: 4/3; }
 
         .menu-card img {
             width: 100%;
@@ -306,26 +274,12 @@
             transition: transform 0.8s ease;
         }
 
-        .menu-card:hover img {
-            transform: scale(1.08);
-        }
+        .menu-card:hover img { transform: scale(1.08); }
 
-        .menu-info {
-            padding: 2rem 1.5rem;
-            text-align: center;
-        }
+        .menu-info { padding: 2rem 1.5rem; text-align: center; }
+        .menu-info h3 { font-size: 1.4rem; margin-bottom: 0.8rem; }
+        .menu-info p { font-size: 0.95rem; color: var(--text-light); }
 
-        .menu-info h3 {
-            font-size: 1.4rem;
-            margin-bottom: 0.8rem;
-        }
-
-        .menu-info p {
-            font-size: 0.95rem;
-            color: var(--text-light);
-        }
-
-        /* Subtle & Elegant Footer / Contact */
         footer {
             background: var(--primary-dark);
             color: var(--surface-white);
@@ -354,11 +308,7 @@
             margin-bottom: 2rem;
         }
 
-        .contact-icon {
-            color: var(--accent-gold);
-            font-size: 1.5rem;
-            margin-top: 0.2rem;
-        }
+        .contact-icon { color: var(--accent-gold); font-size: 1.5rem; margin-top: 0.2rem; }
 
         .contact-text h4 {
             font-family: 'Montserrat', sans-serif;
@@ -377,15 +327,9 @@
             transition: var(--transition);
         }
 
-        .contact-text a:hover {
-            color: var(--accent-gold);
-        }
+        .contact-text a:hover { color: var(--accent-gold); }
 
-        .social-links {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
+        .social-links { display: flex; gap: 1.5rem; margin-top: 2rem; }
 
         .social-icon {
             display: flex;
@@ -418,7 +362,6 @@
             gap: 0.5rem;
         }
 
-        /* Perfect Mobile Responsiveness */
         @media (max-width: 992px) {
             .about-grid { grid-template-columns: 1fr; gap: 3rem; }
             .about-image img { aspect-ratio: 16/9; }
@@ -427,12 +370,9 @@
         @media (max-width: 768px) {
             header { padding: 0.8rem 5%; }
             .brand-logo { max-height: 60px; }
-            
-            /* Show hamburger menu icon */
             .menu-toggle { display: block; }
-            
-            /* Mobile Navigation Styling */
-            nav { 
+
+            nav {
                 position: absolute;
                 top: 100%;
                 left: 0;
@@ -443,16 +383,13 @@
                 padding: 2rem 5%;
                 gap: 2rem;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                
-                /* Hide menu by default off-screen */
                 transform: translateY(-150%);
                 opacity: 0;
                 pointer-events: none;
                 transition: var(--transition);
                 border-bottom: 2px solid var(--accent-purple);
             }
-            
-            /* Class to slide menu in */
+
             nav.nav-active {
                 transform: translateY(0);
                 opacity: 1;
@@ -460,7 +397,6 @@
             }
 
             nav a { font-size: 1.1rem; }
-            
             section { padding: 5rem 5%; }
             .section-title { margin-bottom: 2rem; }
             .footer-grid { gap: 3rem; }
@@ -470,8 +406,9 @@
 <body>
 
     <header>
+        <!-- ✅ Header Logo - assets/logo.png -->
         <a href="#" class="logo">
-            <img src="logo.png" alt="Mannai Twins Logo" class="brand-logo">
+            <img src="assets/logo.png" alt="Mannai Twins Logo" class="brand-logo">
         </a>
         
         <nav id="nav-menu">
@@ -605,14 +542,12 @@
             <div class="footer-brand">
                 <h2 style="color: var(--surface-white); font-size: 2rem;">Mannai Twins</h2>
                 <p>Redefining homemade treats through the perfect blend of traditional nutrition and modern luxury.</p>
-                
                 <div class="social-links">
                     <a href="https://www.instagram.com/mannaitwins_homebakes" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                     <a href="https://youtube.com/shorts/oXJsgTzi4uo" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
                     <a href="https://wa.me/919677372159" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
-            
             <div class="footer-contact">
                 <div class="contact-block">
                     <i class="fab fa-whatsapp contact-icon"></i>
@@ -621,7 +556,6 @@
                         <a href="https://wa.me/919677372159" target="_blank">+91 96773 72159</a>
                     </div>
                 </div>
-                
                 <div class="contact-block">
                     <i class="fas fa-home contact-icon" style="font-size: 1.2rem;"></i>
                     <div class="contact-text">
@@ -631,7 +565,6 @@
                 </div>
             </div>
         </div>
-        
         <div class="footer-bottom">
             <span>&copy; 2026 Mannai Twins Healthy Homebakes. All rights reserved.</span>
             <span style="font-style: italic; color: var(--accent-gold);">Crafted with care by Mrs. Kaviya in Trichy.</span>
@@ -639,7 +572,6 @@
     </footer>
 
     <script>
-        // Show the WhatsApp button next to the hamburger menu on mobile
         if (window.innerWidth <= 768) {
             document.getElementById('mobile-btn').style.display = 'inline-flex';
         }
@@ -648,13 +580,11 @@
                 document.getElementById('mobile-btn').style.display = 'inline-flex';
             } else {
                 document.getElementById('mobile-btn').style.display = 'none';
-                // Also reset menu state if resizing back to desktop
                 document.getElementById('nav-menu').classList.remove('nav-active');
                 document.querySelector('#mobile-menu i').className = 'fas fa-bars';
             }
         });
 
-        // Hamburger Menu Toggle Logic
         const mobileMenu = document.getElementById('mobile-menu');
         const navMenu = document.getElementById('nav-menu');
         const navLinks = document.querySelectorAll('.nav-link');
@@ -662,23 +592,17 @@
 
         mobileMenu.addEventListener('click', () => {
             navMenu.classList.toggle('nav-active');
-            
-            // Toggle icon between hamburger and close (X)
-            if(navMenu.classList.contains('nav-active')) {
-                mobileIcon.classList.remove('fa-bars');
-                mobileIcon.classList.add('fa-times');
+            if (navMenu.classList.contains('nav-active')) {
+                mobileIcon.classList.replace('fa-bars', 'fa-times');
             } else {
-                mobileIcon.classList.remove('fa-times');
-                mobileIcon.classList.add('fa-bars');
+                mobileIcon.classList.replace('fa-times', 'fa-bars');
             }
         });
 
-        // Auto-close menu when a link is clicked
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navMenu.classList.remove('nav-active');
-                mobileIcon.classList.remove('fa-times');
-                mobileIcon.classList.add('fa-bars');
+                mobileIcon.classList.replace('fa-times', 'fa-bars');
             });
         });
     </script>
