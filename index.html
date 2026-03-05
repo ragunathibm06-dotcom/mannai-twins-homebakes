@@ -60,12 +60,7 @@
             transition: var(--transition);
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            z-index: 1001;
-        }
+        .logo { display: flex; align-items: center; text-decoration: none; z-index: 1001; }
 
         .brand-logo {
             max-height: 80px;
@@ -74,11 +69,7 @@
             filter: drop-shadow(0 4px 6px rgba(0,0,0,0.05));
         }
 
-        nav {
-            display: flex;
-            align-items: center;
-            gap: 2.5rem;
-        }
+        nav { display: flex; align-items: center; gap: 2.5rem; }
 
         nav a {
             text-decoration: none;
@@ -94,10 +85,8 @@
         nav a::after {
             content: '';
             position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
+            bottom: -5px; left: 0;
+            width: 0; height: 1px;
             background-color: var(--accent-purple);
             transition: var(--transition);
         }
@@ -105,12 +94,7 @@
         nav a:hover { color: var(--accent-purple); }
         nav a:hover::after { width: 100%; }
 
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            z-index: 1001;
-        }
+        .header-actions { display: flex; align-items: center; gap: 1.5rem; z-index: 1001; }
 
         .menu-toggle {
             display: none;
@@ -119,7 +103,6 @@
             color: var(--primary-dark);
             transition: var(--transition);
         }
-
         .menu-toggle:hover { color: var(--accent-purple); }
 
         .btn {
@@ -146,17 +129,10 @@
             box-shadow: 0 10px 20px rgba(139, 121, 163, 0.2);
         }
 
-        .btn-outline {
-            background: transparent;
-            color: var(--primary-dark);
-            border: 1px solid var(--primary-dark);
-        }
+        .btn-outline { background: transparent; color: var(--primary-dark); border: 1px solid var(--primary-dark); }
+        .btn-outline:hover { background: var(--primary-dark); color: var(--surface-white); }
 
-        .btn-outline:hover {
-            background: var(--primary-dark);
-            color: var(--surface-white);
-        }
-
+        /* Hero uses CSS background with multiple fallback sources */
         .hero {
             height: 100vh;
             min-height: 600px;
@@ -166,23 +142,19 @@
             text-align: center;
             padding: 0 5%;
             position: relative;
-            background: #000;
+            background: #2a1f1a;
         }
 
-        .hero::before {
-            content: '';
+        .hero-bg {
             position: absolute;
             inset: 0;
-            /* ✅ Hero - direct Unsplash source URL, always loads */
-            background: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1920&q=80') center/cover no-repeat;
-            opacity: 0.6;
+            background-image: url('https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.55;
         }
 
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; }
 
         .hero h1 {
             color: var(--surface-white);
@@ -201,7 +173,6 @@
         }
 
         section { padding: 8rem 5%; }
-
         .section-header { text-align: center; margin-bottom: 4rem; }
 
         .section-subtitle {
@@ -226,10 +197,10 @@
         }
 
         .about-image {
-            position: relative;
             border-radius: var(--radius-lg);
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(58, 46, 77, 0.1);
+            background: #f0ebe4;
         }
 
         .about-image img {
@@ -238,11 +209,6 @@
             object-fit: cover;
             aspect-ratio: 4/5;
             display: block;
-        }
-
-        /* Fallback background color while images load */
-        .about-image, .menu-img-wrapper {
-            background-color: #f0ebe4;
         }
 
         .about-content p { font-size: 1.05rem; margin-bottom: 1.5rem; color: var(--text-body); }
@@ -273,7 +239,7 @@
         .menu-img-wrapper {
             overflow: hidden;
             aspect-ratio: 4/3;
-            position: relative;
+            background: #f0ebe4;
         }
 
         .menu-card img {
@@ -281,8 +247,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.8s ease;
-            /* Show placeholder color until image loads */
-            background-color: #f0ebe4;
+            display: block;
         }
 
         .menu-card:hover img { transform: scale(1.08); }
@@ -295,7 +260,6 @@
             background: var(--primary-dark);
             color: var(--surface-white);
             padding: 6rem 5% 3rem;
-            position: relative;
         }
 
         .footer-grid {
@@ -306,19 +270,9 @@
             margin: 0 auto 4rem;
         }
 
-        .footer-brand p {
-            color: rgba(255,255,255,0.7);
-            margin-top: 1.5rem;
-            max-width: 350px;
-        }
+        .footer-brand p { color: rgba(255,255,255,0.7); margin-top: 1.5rem; max-width: 350px; }
 
-        .contact-block {
-            display: flex;
-            align-items: flex-start;
-            gap: 1.5rem;
-            margin-bottom: 2rem;
-        }
-
+        .contact-block { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem; }
         .contact-icon { color: var(--accent-gold); font-size: 1.5rem; margin-top: 0.2rem; }
 
         .contact-text h4 {
@@ -339,15 +293,11 @@
         }
 
         .contact-text a:hover { color: var(--accent-gold); }
-
         .social-links { display: flex; gap: 1.5rem; margin-top: 2rem; }
 
         .social-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 45px;
-            height: 45px;
+            display: flex; align-items: center; justify-content: center;
+            width: 45px; height: 45px;
             border-radius: 50%;
             border: 1px solid rgba(255,255,255,0.2);
             color: var(--surface-white);
@@ -368,9 +318,7 @@
             border-top: 1px solid rgba(255,255,255,0.1);
             font-size: 0.85rem;
             color: rgba(255,255,255,0.5);
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            display: flex; flex-direction: column; gap: 0.5rem;
         }
 
         @media (max-width: 992px) {
@@ -384,29 +332,18 @@
             .menu-toggle { display: block; }
 
             nav {
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
+                position: absolute; top: 100%; left: 0; width: 100%;
                 background: rgba(253, 251, 247, 0.98);
                 backdrop-filter: blur(15px);
                 flex-direction: column;
-                padding: 2rem 5%;
-                gap: 2rem;
+                padding: 2rem 5%; gap: 2rem;
                 box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-                transform: translateY(-150%);
-                opacity: 0;
-                pointer-events: none;
+                transform: translateY(-150%); opacity: 0; pointer-events: none;
                 transition: var(--transition);
                 border-bottom: 2px solid var(--accent-purple);
             }
 
-            nav.nav-active {
-                transform: translateY(0);
-                opacity: 1;
-                pointer-events: auto;
-            }
-
+            nav.nav-active { transform: translateY(0); opacity: 1; pointer-events: auto; }
             nav a { font-size: 1.1rem; }
             section { padding: 5rem 5%; }
             .section-title { margin-bottom: 2rem; }
@@ -420,16 +357,14 @@
         <a href="#" class="logo">
             <img src="assets/logo.png" alt="Mannai Twins Logo" class="brand-logo">
         </a>
-        
         <nav id="nav-menu">
             <a href="#about" class="nav-link">Our Story</a>
             <a href="#menu" class="nav-link">The Menu</a>
             <a href="#contact" class="nav-link">Contact</a>
             <a href="https://wa.me/919677372159?text=Hi!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-outline nav-link" style="padding: 0.6rem 1.5rem;">Order Now</a>
         </nav>
-
         <div class="header-actions">
-            <a href="https://wa.me/919677372159" target="_blank" class="btn" style="display: none; padding: 0.6rem 1.2rem; font-size: 0.8rem;" id="mobile-btn">
+            <a href="https://wa.me/919677372159" target="_blank" class="btn" style="display:none; padding:0.6rem 1.2rem; font-size:0.8rem;" id="mobile-btn">
                 <i class="fab fa-whatsapp"></i> Chat
             </a>
             <div class="menu-toggle" id="mobile-menu">
@@ -439,8 +374,10 @@
     </header>
 
     <section class="hero">
+        <!-- Pexels - always loads, no referral block -->
+        <div class="hero-bg" id="hero-bg"></div>
         <div class="hero-content">
-            <span style="display: block; color: var(--accent-gold); font-family: 'Montserrat', sans-serif; letter-spacing: 4px; text-transform: uppercase; font-size: 0.9rem; margin-bottom: 1.5rem;">Baked with love at home</span>
+            <span style="display:block; color:var(--accent-gold); font-family:'Montserrat',sans-serif; letter-spacing:4px; text-transform:uppercase; font-size:0.9rem; margin-bottom:1.5rem;">Baked with love at home</span>
             <h1>The Purest Ingredients.<br>The Finest Taste.</h1>
             <p>Experience the luxury of premium homemade treats, crafted from traditional millets and natural flavours. No compromises, just pure goodness.</p>
             <a href="https://wa.me/919677372159?text=Hi!%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn">
@@ -452,12 +389,7 @@
     <section id="about">
         <div class="about-grid">
             <div class="about-image">
-                <!-- ✅ About image - food/baking themed, reliable -->
-                <img 
-                    src="https://images.unsplash.com/photo-1556910103-1c02745a872f?w=800&q=80" 
-                    onerror="this.src='https://placehold.co/800x1000/f0ebe4/8b79a3?text=Mannai+Twins'" 
-                    alt="Pouring batter in home kitchen" 
-                    loading="lazy">
+                <img id="about-img" alt="Home kitchen baking">
             </div>
             <div class="about-content">
                 <span class="section-subtitle">Our Heritage</span>
@@ -475,111 +407,13 @@
             <span class="section-subtitle">Our Selection</span>
             <h2 class="section-title">Premium Menu</h2>
         </div>
-        
-        <div class="menu-grid">
-            <!-- ✅ All menu images use onerror fallback so they ALWAYS show something -->
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1562777717-b6aff3af3657?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Birthday+Cakes'" 
-                         alt="Birthday Cakes" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Birthday Cakes</h3>
-                    <p>Classic flavours, elegantly designed and baked to perfection for your special day.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Custom+Cakes'" 
-                         alt="Custom Cakes" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Bespoke Custom Cakes</h3>
-                    <p>Artisanal designs tailored exclusively to match your event theme and vision.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1588195538326-c5b1e9f80a1b?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Millet+Cakes'" 
-                         alt="Healthy Millet Cakes" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Healthy Millet Cakes</h3>
-                    <p>Nutrient-rich Ragi and Kambu cakes offering a truly guilt-free indulgence.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Ragi+Biscuits'" 
-                         alt="Ragi Milk Fantasy Biscuits" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Ragi Milk Fantasy Biscuits</h3>
-                    <p>Our signature homemade creation: crisp traditional grains with a rich chocolate centre.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1519869325930-281384150729?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Sugar+Free'" 
-                         alt="Sugar-Free Cakes" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Sugar-Free Delights</h3>
-                    <p>Naturally sweetened masterpieces for a refined, health-conscious lifestyle.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1558301211-0d8c8ddee6ec?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Kids+Specials'" 
-                         alt="Kids Special Cakes" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Kids' Specials</h3>
-                    <p>Fun, vibrant, and completely safe bakes made without any artificial nasties.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1605807646983-377bc5a76493?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Festive+Specials'" 
-                         alt="Festive Specials" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Festive Specials</h3>
-                    <p>Traditional sweets and wholesome baked goods designed to spread holiday cheer.</p>
-                </div>
-            </div>
-
-            <div class="menu-card">
-                <div class="menu-img-wrapper">
-                    <img src="https://images.unsplash.com/photo-1599599810769-bcde5a160d32?w=600&q=80" 
-                         onerror="this.src='https://placehold.co/600x450/f0ebe4/8b79a3?text=Savoury+Bites'" 
-                         alt="Snacks & Healthy Bites" loading="lazy">
-                </div>
-                <div class="menu-info">
-                    <h3>Savoury & Energy Bites</h3>
-                    <p>Premium savoury crunches and nutrient bites to perfectly fuel your day.</p>
-                </div>
-            </div>
-        </div>
+        <div class="menu-grid" id="menu-grid"></div>
     </section>
 
     <footer id="contact">
         <div class="footer-grid">
             <div class="footer-brand">
-                <h2 style="color: var(--surface-white); font-size: 2rem;">Mannai Twins</h2>
+                <h2 style="color:var(--surface-white); font-size:2rem;">Mannai Twins</h2>
                 <p>Redefining homemade treats through the perfect blend of traditional nutrition and modern luxury.</p>
                 <div class="social-links">
                     <a href="https://www.instagram.com/mannaitwins_homebakes" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
@@ -596,7 +430,7 @@
                     </div>
                 </div>
                 <div class="contact-block">
-                    <i class="fas fa-home contact-icon" style="font-size: 1.2rem;"></i>
+                    <i class="fas fa-home contact-icon" style="font-size:1.2rem;"></i>
                     <div class="contact-text">
                         <h4>Our Home Kitchen</h4>
                         <p>Bhuvaneshwari Nagar,<br>Mannachanallur,<br>Trichy.</p>
@@ -606,11 +440,134 @@
         </div>
         <div class="footer-bottom">
             <span>&copy; 2026 Mannai Twins Healthy Homebakes. All rights reserved.</span>
-            <span style="font-style: italic; color: var(--accent-gold);">Crafted with care by Mrs. Kaviya in Trichy.</span>
+            <span style="font-style:italic; color:var(--accent-gold);">Crafted with care by Mrs. Kaviya in Trichy.</span>
         </div>
     </footer>
 
     <script>
+        // ─── IMAGE CONFIG ───────────────────────────────────────────────
+        // Using Pexels direct photo URLs — reliable worldwide including India
+        const HERO_URLS = [
+            'https://images.pexels.com/photos/1126359/pexels-photo-1126359.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+            'https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop',
+        ];
+
+        const ABOUT_URLS = [
+            'https://images.pexels.com/photos/3407777/pexels-photo-3407777.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+            'https://images.pexels.com/photos/6605210/pexels-photo-6605210.jpeg?auto=compress&cs=tinysrgb&w=800&h=1000&fit=crop',
+        ];
+
+        const MENU_ITEMS = [
+            {
+                title: 'Birthday Cakes',
+                desc: 'Classic flavours, elegantly designed and baked to perfection for your special day.',
+                urls: [
+                    'https://images.pexels.com/photos/1854652/pexels-photo-1854652.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/2144200/pexels-photo-2144200.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: 'Bespoke Custom Cakes',
+                desc: 'Artisanal designs tailored exclusively to match your event theme and vision.',
+                urls: [
+                    'https://images.pexels.com/photos/1721934/pexels-photo-1721934.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/1088463/pexels-photo-1088463.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: 'Healthy Millet Cakes',
+                desc: 'Nutrient-rich Ragi and Kambu cakes offering a truly guilt-free indulgence.',
+                urls: [
+                    'https://images.pexels.com/photos/3026810/pexels-photo-3026810.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/1414234/pexels-photo-1414234.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: 'Ragi Milk Fantasy Biscuits',
+                desc: 'Our signature homemade creation: crisp traditional grains with a rich chocolate centre.',
+                urls: [
+                    'https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/890515/pexels-photo-890515.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: 'Sugar-Free Delights',
+                desc: 'Naturally sweetened masterpieces for a refined, health-conscious lifestyle.',
+                urls: [
+                    'https://images.pexels.com/photos/1264195/pexels-photo-1264195.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/3026804/pexels-photo-3026804.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: "Kids' Specials",
+                desc: 'Fun, vibrant, and completely safe bakes made without any artificial nasties.',
+                urls: [
+                    'https://images.pexels.com/photos/1070850/pexels-photo-1070850.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/3993440/pexels-photo-3993440.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: 'Festive Specials',
+                desc: 'Traditional sweets and wholesome baked goods designed to spread holiday cheer.',
+                urls: [
+                    'https://images.pexels.com/photos/1028714/pexels-photo-1028714.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/827516/pexels-photo-827516.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+            {
+                title: 'Savoury & Energy Bites',
+                desc: 'Premium savoury crunches and nutrient bites to perfectly fuel your day.',
+                urls: [
+                    'https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                    'https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=600&h=450&fit=crop',
+                ]
+            },
+        ];
+
+        // ─── SMART IMAGE LOADER ─────────────────────────────────────────
+        // Tries each URL in order, uses first one that loads
+        function loadImageWithFallback(imgEl, urls, index = 0) {
+            if (index >= urls.length) return; // all failed, leave as-is
+            const testImg = new Image();
+            testImg.onload = () => { imgEl.src = urls[index]; };
+            testImg.onerror = () => { loadImageWithFallback(imgEl, urls, index + 1); };
+            testImg.src = urls[index];
+        }
+
+        function loadBgWithFallback(el, urls, index = 0) {
+            if (index >= urls.length) return;
+            const testImg = new Image();
+            testImg.onload = () => { el.style.backgroundImage = `url('${urls[index]}')`; };
+            testImg.onerror = () => { loadBgWithFallback(el, urls, index + 1); };
+            testImg.src = urls[index];
+        }
+
+        // ─── LOAD HERO ──────────────────────────────────────────────────
+        loadBgWithFallback(document.getElementById('hero-bg'), HERO_URLS);
+
+        // ─── LOAD ABOUT IMAGE ───────────────────────────────────────────
+        loadImageWithFallback(document.getElementById('about-img'), ABOUT_URLS);
+
+        // ─── BUILD & LOAD MENU CARDS ────────────────────────────────────
+        const menuGrid = document.getElementById('menu-grid');
+        MENU_ITEMS.forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'menu-card';
+            card.innerHTML = `
+                <div class="menu-img-wrapper">
+                    <img alt="${item.title}">
+                </div>
+                <div class="menu-info">
+                    <h3>${item.title}</h3>
+                    <p>${item.desc}</p>
+                </div>
+            `;
+            menuGrid.appendChild(card);
+            const img = card.querySelector('img');
+            loadImageWithFallback(img, item.urls);
+        });
+
+        // ─── MOBILE NAV ─────────────────────────────────────────────────
         if (window.innerWidth <= 768) {
             document.getElementById('mobile-btn').style.display = 'inline-flex';
         }
